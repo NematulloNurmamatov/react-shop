@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Shop</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav">
+            <div class="logo">
+                <h1 class="text-white text-5xl font-black	">React Shop</h1>
+            </div>
+            <ul id="menuList" class="ch">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+            </div>
+            <div class="right text-white">
+                <button class="btn1"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+                <button class="btn1"><i class="fa-solid fa-user-plus"></i> </i> Sign Up</button>
+                <button class="btn1"><i class="fa-solid fa-tv"></i></i></button>
+                <button class="btn1"><i class="fa-brands fa-github"></i></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="w-[90%] mx-auto">
+        <div class="search_div"> 
+            <i class="fa-solid fa-magnifying-glass text-white"></i>
+            <input  type="text">
+        </div>
+
+        <div class="flex w-[80%] aa">
+            <div id="list" class="grid grid-cols-3 mt-[50px] gap-10 bb">
+                
+            </div>
+            <!-- <div>
+                <h2>das</h2>
+            </div> -->
+        </div>
+    </main>
+
+
+    <script>
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
+
+        function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "300px";
+            }
+            else {
+                menuList.style.maxHeight = "0px";
+            }
+        }
+
+    </script>
+    <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

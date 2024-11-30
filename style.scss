@@ -1,0 +1,207 @@
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0px 20px;
+}
+
+
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #131313;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: #202020;
+    padding: 15px 0px;
+    box-shadow: 0px 0px 10px 5px #0f0f0f;
+
+    .nav {
+        max-width: 1280px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        padding: 0px 20px;
+        justify-content: space-between;
+        // position: relative;
+        height: 70px;
+        // justify-content: center;
+        background-color: #202020;
+
+        ul {
+            display: flex;
+            gap: 70px;
+            align-items: center;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    transition: 0.3s;
+                    font-size: 20px;
+                }
+
+                a:hover {
+                    color: #F35F2F;
+                }
+            }
+        }
+
+        .ch {
+            // border px-20 py-7 rounded-[30px] max-w-[770px]:none
+            border: 1px solid rgb(85, 85, 85);
+            background-color: #202020;
+            padding: 25px 44px;
+            border-radius: 30px;
+
+        }
+
+        button {
+            all: unset;
+            border-bottom: 1px solid black;
+            cursor: pointer;
+            padding-bottom: 7px;
+        }
+
+        .right {
+            display: flex;
+            gap: 10px;
+            .btn1 {
+                border: 1px solid rgb(85, 85, 85);
+                background-color: #131313;
+                color: #fff;
+                border-radius: 10px;
+                padding: 10px 20px;
+                cursor: pointer;
+                font-family: sans-serif;
+                transition: 0.3s;
+            }
+            .btn1:hover {
+                color: blue;
+            }
+        }
+    }
+}
+
+.menu-icon {
+    display: none;
+}
+
+.menu-icon i {
+    color: #fff;
+    font-size: 30px;
+}
+
+.search_div {
+    width: 30%;
+    margin-top: 40px;
+    border: 1px solid rgb(85, 85, 85);
+    padding: 10px;
+    border-radius: 10px;
+    i {
+        padding: 10px;
+        color: white;
+        background-color: rgb(45, 0, 128);
+        border-radius: 10px;
+        margin-right: 4px;
+    }
+    input {
+        border: none !important;
+        background-color: transparent;
+        color: white;
+        outline: none;
+        width: 88%;
+    }
+}
+
+.aa {
+    .bb {
+        .div {
+            // background-color: red;
+            border-radius: 10px;
+            border: 1px solid rgb(85, 85, 85);
+            padding: 20px;
+            img {
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+
+@media (max-width:780px) {
+
+    nav {
+        ul {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            right: 0;
+            flex-direction: column;
+            text-align: center;
+            background: #AE7B3C;
+            color: white !important;
+            gap: 0;
+            overflow: hidden;
+
+            li {
+                padding: 20px;
+                padding-top: 0;
+                padding-top: 10px;
+
+                a {
+                    color: #fff !important;
+                }
+
+            }
+        }
+
+        button {
+            color: white;
+            padding-bottom: 10px;
+        }
+
+        .menu-icon {
+            display: block;
+
+            i {
+                color: #000;
+            }
+        }
+
+        #menuList {
+            transition: all 0.5s;
+        }
+
+        .button {
+            display: none;
+        }
+
+        .right {
+            display: none !important;
+        }
+        .ch {
+            margin-top: 20px;
+            border: none !important;
+            padding: 0 !important;
+        }
+    }
+}
