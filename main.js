@@ -1,3 +1,5 @@
+let load = document.querySelector("#load")
+
 function getAllProducts() {
     fetch("https://api.escuelajs.co/api/v1/products?limit=48&offset=0", {
         method: "GET",
@@ -11,7 +13,10 @@ function getAllProducts() {
         })
         .catch((err) => {
             console.log(err);
-        });
+        })
+        .finally(() => {
+            load.style.display = "none";
+        })
 }
 getAllProducts()
 
