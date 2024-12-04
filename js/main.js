@@ -1,4 +1,5 @@
-let load = document.querySelector("#load")
+let load = document.querySelector("#load");
+let badge = document.querySelector("#badge");
 
 function getAllProducts() {
     fetch("https://api.escuelajs.co/api/v1/products?limit=48&offset=0", {
@@ -42,9 +43,10 @@ function render(product) {
         let p4 = document.createElement("p");
         p4.textContent = `$${product.price.toFixed(2)}`;
         p4.classList.add("p4")
-        let btn = document.createElement("buttin");
+        let btn = document.createElement("button");
         btn.textContent = "Add to Cart";
         btn.classList.add("btn");
+        btn.setAttribute("onclick", `addToStore(${product.id})`);
 
         let div1 = document.createElement("div");
         div1.classList.add("div1");
@@ -66,5 +68,15 @@ function render(product) {
     });
 }
 
+let store_list = [];
 
+async function addToStore(params) {
+    let res = await fetch(`https://api.escuelajs.co/api/v1/products/${params}`);
+    res = await res.json();
+    store_list.push(res);
+    badge.textContent = store_list.length;
+    console.log(store_list);
+    
+}
 
+addToStore()
