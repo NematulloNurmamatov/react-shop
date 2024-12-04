@@ -78,5 +78,4 @@ async function addToStore(params) {
     console.log(store_list);
     
 }
-
 // addToStore()
