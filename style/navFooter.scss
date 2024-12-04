@@ -59,7 +59,7 @@ nav {
                 }
 
                 a:hover {
-                    color: #F35F2F;
+                    color: rgb(112, 59, 247);
                 }
             }
         }
@@ -83,6 +83,7 @@ nav {
         .right {
             display: flex;
             gap: 10px;
+
             .btn1 {
                 border: 1px solid rgb(85, 85, 85);
                 background-color: #131313;
@@ -93,8 +94,9 @@ nav {
                 font-family: sans-serif;
                 transition: 0.3s;
             }
+
             .btn1:hover {
-                color: blue;
+                color: rgb(112, 59, 247);
             }
         }
     }
@@ -115,6 +117,7 @@ nav {
     border: 1px solid rgb(85, 85, 85);
     padding: 10px;
     border-radius: 10px;
+
     i {
         padding: 10px;
         color: white;
@@ -122,6 +125,7 @@ nav {
         border-radius: 10px;
         margin-right: 4px;
     }
+
     input {
         border: none !important;
         background-color: transparent;
@@ -131,89 +135,12 @@ nav {
     }
 }
 
-main, footer {
+main,
+footer {
     max-width: 1400px;
     margin: auto;
 }
 
-.aa {
-    .bb {
-        .div {
-            // background-color: red;
-            border-radius: 10px;
-            border: 1px solid rgb(85, 85, 85);
-            padding: 20px;
-            img {
-                border-radius: 10px;
-                margin-bottom: 20px;
-            }
-            .p {
-                color: white;
-                font-size: 18px;
-                margin-bottom: 10px !important;
-            }
-            .p2 {
-                display: inline;
-                color: white;
-                border: 1px solid rgb(85, 85, 85);
-                padding: 6px 15px;
-                border-radius: 15px;
-            }
-            .p3 {
-                color: gray;
-                font-size: 14px;
-                // margin-top: 20px;
-                ;
-            }
-            .p4 {
-                color: white;
-            }
-            .btn {
-                border: none;
-                background-color: #2416a3;
-                color: #fff;
-                padding: 10px 20px;
-                border-radius: 10px;
-                cursor: pointer;
-                font-size: 16px;
-                transition: 0.3s;
-            }
-            .div1 {
-                margin-top: 20px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-        }
-    }
-    .btns {
-        // display: block;
-        width: 80%;
-        border: 1px solid #9e9e9e;
-        height: 335px;
-        padding: 10px 0px;
-        border-radius: 10px;
-        // padding-right: 20px;
-
-        button {
-            display: block;
-            width: 100%;
-            margin-bottom: 12px;
-            font-size: 18px;
-            background: linear-gradient(to right, rgb(37, 37, 37), #131313);
-            padding: 5px 0px;
-            padding-left:  10px;
-            padding-right: 20px;
-            border-left: 3px solid transparent;
-            transition: .3s;
-            text-align: start;
-
-        }
-        button:focus {
-            border-left: 3px solid #1138b6;
-        }
-    }
-}
 
 
 footer {
@@ -226,14 +153,17 @@ footer {
             margin-bottom: 1px;
             font-family: sans-serif;
         }
+
         p:hover {
             color: #9e9e9e;
         }
+
         h3 {
             color: #1138b6;
             font-size: 18px;
             margin-bottom: 5px;
         }
+
         input {
             border: none;
             outline: none;
@@ -295,6 +225,7 @@ footer {
         .right {
             display: none !important;
         }
+
         .ch {
             margin-top: 20px;
             border: none !important;

@@ -1,0 +1,300 @@
+main {
+    section {
+        h1 {
+            font-family: sans-serif;
+            font-size: 60px;
+            font-weight: 800;
+
+            span {
+                color: rgb(112, 59, 247);
+            }
+        }
+
+        p {
+            color: rgba(229, 231, 235, 0.763);
+            font-size: 20px;
+            max-width: 760px;
+            margin: auto;
+        }
+
+        .btns {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            text-align: center;
+            margin-top: 20px;
+
+            .btn {
+                background-color: rgb(112, 59, 247);
+                transition: .3s;
+            }
+
+            .btn:hover {
+                background-color: rgba(112, 59, 247, 0.808);
+            }
+
+            .btn2 {
+                background-color: rgb(38, 38, 38);
+                transition: .3s;
+
+            }
+
+            .btn2:hover {
+                background-color: rgba(38, 38, 38, 0.652);
+            }
+
+            .btn,
+            .btn2 {
+                padding: 12px 32px;
+                border-radius: 6px;
+            }
+        }
+    }
+
+    .ciziq {
+        width: 3px;
+        margin: auto;
+        height: 100px;
+        margin-top: -50px;
+        margin-bottom: -50px;
+
+        .c {
+            position: absolute;
+            background-color: white;
+            width: 3px;
+            height: 100px;
+            margin: auto;
+
+        }
+    }
+
+    .section2 {
+        padding-top: 150px;
+        width: 100%;
+        height: auto;
+        letter-spacing: 1px;
+        background-color: rgb(33, 33, 33);
+
+        .p2 {
+            color: rgba(255, 255, 255, 0.604);
+            letter-spacing: 1px;
+            width: 50%;
+            margin: auto;
+            margin-top: 20px;
+            font-size: 19px;
+        }
+
+        .power {
+            display: flex;
+            gap: 30px;
+            width: 90%;
+            margin: auto;
+
+            .left {
+                width: 50%;
+                margin: auto;
+
+                .cards {
+                    .card1 {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 20px;
+                        // color: rgb(112, 59, 247);
+                        border: 3px solid rgb(83, 83, 83);
+                        background-color: rgb(47, 47, 47);
+                        padding: 20px;
+                        cursor: pointer;
+                        border-radius: 8px;
+
+                        i {
+                            padding: 10px;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .card1:active {
+                        background-color: rgb(38, 38, 38);
+                        border: 3px solid rgb(112, 59, 247);
+
+                        i {
+
+                            background-color: rgb(112, 59, 247);
+                            color: white;
+                        }
+                    }
+                }
+
+                p {
+                    color: rgba(255, 255, 255, 0.604);
+
+                }
+            }
+
+            .right {
+                width: 50%;
+                margin: auto;
+
+                img {
+                    width: 500px;
+                }
+            }
+        }
+    }
+
+    .section3 {
+        padding-top: 100px;
+
+        h4 {
+            font-size: 14px;
+            letter-spacing: 1px;
+            width: 50%;
+            margin: auto;
+            margin-top: 20px;
+            // font-size: 19px;
+        }
+
+        .pi {
+            letter-spacing: 1px;
+            width: 50%;
+            margin: auto;
+            margin-top: 20px;
+            font-size: 19px;
+            color: rgba(229, 231, 235, 0.763);
+        }
+
+        .cards {
+            width: 90%;
+            margin: auto;
+            margin-top: 70px;
+
+            // margin-bottom: 200px;
+            .card1 {
+                background-color: rgb(33, 33, 33);
+                padding: 20px;
+
+                i {
+                    background-color: rgb(112, 59, 247);
+                    padding: 10px;
+                    border-radius: 50%;
+                    font-size: 20px;
+                }
+            }
+        }
+
+
+    }
+
+    .section4 {
+        width: 80%;
+        margin: auto;
+        margin-top: 150px;
+        padding-bottom: 100px;
+
+        p {
+            letter-spacing: 1px;
+        }
+
+        .mb-10 {
+            color: rgba(255, 255, 255, 0.604);
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        .darya {
+            width: 90%;
+            margin: auto;
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 100px;
+            border: 1px solid rgb(112, 59, 247);
+
+            img {
+                border-radius: 50%;
+                width: 100px;
+                margin: auto;
+                margin-top: -55px;
+                margin-bottom: 20px;
+
+            }
+
+            .trusted {
+                color: rgb(149, 149, 149);
+                letter-spacing: 1px;
+
+            }
+
+            .da {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            .ashon {
+                color: rgb(112, 59, 247);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .section5 {
+        background-color: rgb(33, 33, 33);
+        padding-top: 70px;
+        padding-bottom: 70px;
+
+        .sec5 {
+            width: 80%;
+            margin: auto;
+            // height: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+            // align-items: center;
+            letter-spacing: 1px;
+            background-color: #131313;
+            padding: 20px;
+            border-radius: 7px;
+
+            .bir {
+                width: 70%;
+                margin: auto;
+
+                .lorem {
+                    color: rgba(255, 255, 255, 0.604);
+                    letter-spacing: 1px;
+                    margin-top: 20px;
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                }
+
+                input {
+                    outline: none;
+                    border: 1px solid rgb(131, 131, 131);
+                    padding: 10px;
+                    background-color: transparent;
+                    color: white;
+                    width: 300px;
+                    border-radius: 7px;
+                }
+
+                button {
+                    padding: 11px 30px;
+                    background-color: rgb(112, 59, 247);
+                    color: white;
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
+                }
+            }
+
+            .ikki {
+                width: 50%;
+                margin: auto;
+
+                img {
+                    width: 300px;
+                    border-radius: 10px;
+                }
+            }
+
+        }
+    }
+}

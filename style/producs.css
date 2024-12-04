@@ -1,0 +1,77 @@
+.top {
+  display: flex;
+}
+.top .savat i {
+  color: #fff;
+  font-size: 24px;
+  margin-left: 10px;
+  margin-top: 55px;
+}
+
+.aa .bb .div {
+  border-radius: 10px;
+  border: 1px solid rgb(85, 85, 85);
+  padding: 20px;
+}
+.aa .bb .div img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.aa .bb .div .p {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px !important;
+}
+.aa .bb .div .p2 {
+  display: inline;
+  color: white;
+  border: 1px solid rgb(85, 85, 85);
+  padding: 6px 15px;
+  border-radius: 15px;
+}
+.aa .bb .div .p3 {
+  color: gray;
+  font-size: 14px;
+}
+.aa .bb .div .p4 {
+  color: white;
+}
+.aa .bb .div .btn {
+  border: none;
+  background-color: #2416a3;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.aa .bb .div .div1 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.aa .btns {
+  width: 80%;
+  border: 1px solid #9e9e9e;
+  height: 335px;
+  padding: 10px 0px;
+  border-radius: 10px;
+}
+.aa .btns button {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  font-size: 18px;
+  background: linear-gradient(to right, rgb(37, 37, 37), #131313);
+  padding: 5px 0px;
+  padding-left: 10px;
+  padding-right: 20px;
+  border-left: 3px solid transparent;
+  transition: 0.3s;
+  text-align: start;
+}
+.aa .btns button:focus {
+  border-left: 3px solid #1138b6;
+}/*# sourceMappingURL=producs.css.map */
