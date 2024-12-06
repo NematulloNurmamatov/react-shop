@@ -37,19 +37,17 @@
         </div>
     </nav>
 
-    
+
     <main class="w-[90%] mx-auto">
-        <div class="top relative">
+        <div class="top">
             <div class="search_div">
                 <i class="fa-solid fa-magnifying-glass text-white"></i>
                 <input type="#text">
             </div>
-            <div class="savat">
+            <div class="savat" onclick="showStore()">
                 <i class="fa-solid fa-basket-shopping"></i> <sup class="text-white bg-red-500 py-1 px-2 rounded" id="badge">0</sup>
             </div>
-            <div id="store" class="w-[800px] min-h-[300px] border bg-red-500 absolute translate-x-[-700]' duration-1000">
 
-            </div>
         </div>
 
 
@@ -73,6 +71,10 @@
         </div>
         <br><br><br>
     </main>
+
+    <div id="store" class="w-[50vw] h-[100vh] overflow-y-scroll border bg-black fixed pt-36 py-3 px-5 top-0 flex flex-col gap-4 right-0 translate-x-[1000px] duration-1000">
+
+    </div>
 
     <footer class="w-[85%] mx-auto">
         <hr class="mx-auto mb-6" width="100%">
@@ -118,6 +120,7 @@
             <p>Made with <span class="text-[#1138b6]">♥</span> by <span class="text-[#1138b6]">Siza</span></p>
             <i class="fa-brands fa-github text-[30px]"></i></i>
         </div>
+
 
     </footer>
 

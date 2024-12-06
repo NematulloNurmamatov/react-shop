@@ -1,9 +1,10 @@
 let load = document.querySelector("#load");
 let badge = document.querySelector("#badge");
+// let store_list = JSON.parse(localStorage.getItem("data")) || [];
 let store_list = [];
 let list = document.getElementById("list");
 let categories_list = document.getElementById("categories");
-let store = document.getElementById("store");
+let store_box = document.getElementById("store");
 
 async function getAllProducts() {
     let res = await fetch(
@@ -71,12 +72,10 @@ function render(product) {
 async function addToStore(params) {
     let res = await fetch(`https://fakestoreapi.com/products/${params}`);
     res = await res.json();
-    store_list.push(res);
-    badge.textContent = store_list.length;
-    // console.log(store_list);
-    console.log(res);
-    
 
+    store_list.push({...res, count: 1 });
+    badge.textContent = store_list.length;
+    renderStore(store_list);
 }
 // addToStore()
 
@@ -100,7 +99,7 @@ getAllCategories()
 
 function renderCategories(categories) {
     let fragment = document.createDocumentFragment();
-    categories = ["All" , ...categories]
+    categories = ["All", ...categories]
     categories?.forEach((element) => {
         let btn_category = document.createElement("button");
         btn_category.textContent = element;
@@ -134,5 +133,117 @@ const filterByCategory = async (category) => {
 }
 
 const showStore = () => {
-    store.classList.remove('translate-x-[-700]')
+    store.classList.toggle('translate-x-[1000px]')
 }
+// showStore()
+
+function renderStore(store_list) {
+    store_box.innerHTML = "";
+    let fragment = document.createDocumentFragment();
+    store_list.forEach((product) => {
+        let card = document.createElement("div");
+        card.classList.add("text-white", "flex", "justify-between", "items-center");
+
+        let left_card = document.createElement("div");
+        left_card.classList.add("flex", "items-center", "gap-4");
+
+        let img = document.createElement("img");
+        img.src = product.image;
+        img.alt = product.title
+        img.classList.add("w-20", "h-20", "rounded-lg")
+
+        let text_box = document.createElement("div");
+        
+        let title = document.createElement("p");
+        title.textContent = product.title;
+
+        let price = document.createElement("p");
+        price.textContent = `$${product.price.toFixed(2)}`;
+
+        text_box.appendChild(title);
+        text_box.appendChild(price);
+
+        left_card.appendChild(img)
+        left_card.appendChild(text_box)
+
+        let right_card = document.createElement("div");
+        right_card.classList.add("flex", "items-center", "gap-2");
+
+        let remove_btn = document.createElement("button");
+        remove_btn.setAttribute("onclick", `removeFromStore(${product.id})`)
+        remove_btn.textContent = "Remove";
+        remove_btn.classList.add("text-red-600", "border", "border-red-600", "px-4", "py-2", "rounded-md","hover:text-white", "hover:bg-red-700", "focus:outline-none");
+
+        let minus = document.createElement("button");
+        minus.setAttribute("onclick", `decrement(${product.id})`)
+        minus.textContent = "-";
+        minus.classList.add("text-gray-600", "border", "border-gray-600", "px-2", "py-1", "rounded-md", "hover:text-white", "hover:bg-gray-700", "focus:outline-none");
+
+
+        let count = document.createElement("span");
+        count.textContent = product.count;
+
+        let plus = document.createElement("button");
+        plus.setAttribute("onclick", `increment(${product.id})`)
+        plus.textContent = "+";
+        plus.classList.add("text-gray-600", "border", "border-gray-600", "px-2", "py-1", "rounded-md", "hover:text-white", "hover:bg-gray-700", "focus:outline-none");
+
+        right_card.appendChild(remove_btn);
+        right_card.appendChild(minus);
+        right_card.appendChild(count);
+        right_card.appendChild(plus);
+        card.appendChild(left_card);
+        card.appendChild(right_card);
+
+
+
+        fragment.appendChild(card)
+    });
+    store_box.appendChild(fragment)
+}
+
+
+function increment(id) {
+    let find_product = store_list.find((product) => {
+        return product.id == id
+    });
+    if(find_product.rating.count > find_product.count) {
+        find_product.count ++ ;
+        renderStore(store_list);
+    }
+    console.log(find_product);
+}
+
+function decrement(id) {
+    let find_product = store_list.find((product) => {
+        return product.id == id
+    });
+    if(find_product.count > 1) {
+        find_product.count -- ;
+        renderStore(store_list);
+    }
+    console.log(find_product);
+}
+
+
+function removeFromStore(id) {
+    let find_product = store_list.find((product) => {
+        return product.id == id
+    });
+    if(find_product) {
+        store_list = store_list.filter((product) => {
+            return product.id!= id
+        });
+        badge.textContent = store_list.length;
+        renderStore(store_list);
+    }
+    console.log(find_product);
+}
+
+
+
+
+
+
+
+
