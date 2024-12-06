@@ -1,27 +1,21 @@
 let load = document.querySelector("#load");
 let badge = document.querySelector("#badge");
-
-function getAllProducts() {
-    fetch("https://api.escuelajs.co/api/v1/products?limit=48&offset=0", {
-        method: "GET",
-    })
-        .then((res) => {
-            return res.json()
-        })
-        .then((res) => {
-            render(res);
-
-        })
-        .catch((err) => {
-            console.log(err);
-        })
-        .finally(() => {
-            load.style.display = "none";
-        })
-}
-getAllProducts()
-
+let store_list = [];
 let list = document.getElementById("list");
+let categories_list = document.getElementById("categories");
+
+async function getAllProducts() {
+    let res = await fetch(
+        `https://fakestoreapi.com/products`,
+        {
+            method: "GET",
+        }
+    );
+    res = await res.json();
+    render(res)
+}
+
+getAllProducts()
 
 function render(product) {
     product.forEach((product) => {
@@ -29,8 +23,10 @@ function render(product) {
         p.textContent = product.title;
         p.classList.add("p");
         let img = document.createElement("img");
-        img.src = product.images[0];
-        img.style.width = "auto";
+        img.src = product.image;
+        img.style.width = "500px";
+        img.style.height = "200px";
+
         img.alt = product.title
         let div = document.createElement("div");
         div.classList.add("div");
@@ -68,14 +64,70 @@ function render(product) {
     });
 }
 
-let store_list = [];
+
+
 
 async function addToStore(params) {
-    let res = await fetch(`https://api.escuelajs.co/api/v1/products/${params}`);
+    let res = await fetch(`https://fakestoreapi.com/products/${params}`);
     res = await res.json();
     store_list.push(res);
     badge.textContent = store_list.length;
-    console.log(store_list);
+    // console.log(store_list);
+    console.log(res);
     
+
 }
 // addToStore()
+
+async function getAllCategories() {
+    try {
+        let res = await fetch("https://fakestoreapi.com/products/categories",
+            {
+                method: "GET",
+            }
+        )
+        res = await res.json()
+        // console.log(res);
+        renderCategories(res)
+
+    } catch (error) {
+        alert(error.message);
+    }
+};
+
+getAllCategories()
+
+function renderCategories(categories) {
+    let fragment = document.createDocumentFragment();
+    categories = ["All" , ...categories]
+    categories?.forEach((element) => {
+        let btn_category = document.createElement("button");
+        btn_category.textContent = element;
+        btn_category.classList.add("btnCategory");
+        btn_category.setAttribute('onclick', `filterByCategory("${element}")`);
+        // console.log(btn_category);
+
+        fragment.appendChild(btn_category)
+
+    })
+    categories_list.appendChild(fragment);
+}
+// renderCategories()
+// getAllCategories()
+
+const filterByCategory = async (category) => {
+    list.innerHTML = "";
+    try {
+        if (category == "All") {
+            getAllProducts()
+        }
+        else {
+            let res = await fetch(`https://fakestoreapi.com/products/category/${category}`)
+            res = await res.json()
+            render(res)
+        }
+
+    } catch (error) {
+        alert(error.message);
+    }
+}
