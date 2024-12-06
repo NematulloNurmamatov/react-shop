@@ -1,0 +1,66 @@
+main {
+    max-width: 1220px;
+    margin: auto;
+    h1 {
+        color: rgb(116, 66, 245);
+        margin-top: 30px;
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    span {
+        color: rgb(112, 59, 247);
+    }
+    .i {
+        display: flex;
+        justify-content: space-evenly;
+        cursor: pointer;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    i {
+        font-size: 78px;        
+    }
+    .fa-react {
+        transition: .3s;
+    }
+    .fa-react:hover {
+        color: rgba(81, 144, 247, 0.5);
+    }
+    .fa-node-js {
+        transition: .3s;
+    }
+    .fa-node-js:hover {
+        color: yellow;
+    }
+    .fa-css3-alt {
+        transition: .3s;
+    }
+    .fa-css3-alt:hover {
+        color: rgba(81, 144, 247, 0.5);
+    }
+    .fa-hexagon-nodes, .fa-node {
+        transition: .3s;
+    }
+    .fa-hexagon-nodes:hover, .fa-node:hover {
+        color: green;
+    }
+    .fa-linkedin {
+        transition: .3s;
+    }
+    .fa-linkedin:hover {
+        color: rgb(61, 61, 236);
+    }
+    .fa-github {
+        color: gray;
+        transition: .3s;
+    }
+    .fa-github:hover {
+        color: white;
+    }
+}

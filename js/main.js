@@ -3,6 +3,7 @@ let badge = document.querySelector("#badge");
 let store_list = [];
 let list = document.getElementById("list");
 let categories_list = document.getElementById("categories");
+let store = document.getElementById("store");
 
 async function getAllProducts() {
     let res = await fetch(
@@ -130,4 +131,8 @@ const filterByCategory = async (category) => {
     } catch (error) {
         alert(error.message);
     }
+}
+
+const showStore = () => {
+    store.classList.remove('translate-x-[-700]')
 }

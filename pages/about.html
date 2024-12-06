@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
+    <title>React Shop</title>
+    <link rel="stylesheet" href="../style/about.css">
     <link rel="stylesheet" href="../style/navFooter.css">
-    <link rel="stylesheet" href="../style/producs.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,16 +16,16 @@
 </head>
 
 <body>
-
     <nav>
         <div class="nav">
             <div class="logo">
-                <a class="text-white text-5xl font-black" href="../index.html">React Shop</a>
+                <!-- <a href="./index.html"></a> -->
+                <a class="text-white text-5xl font-black" href="./index.html">React Shop</a>
             </div>
             <ul id="menuList" class="ch">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="./about.html">About</a></li>
+                <li><a href="./products.html">Products</a></li>
+                <li><a href="#">About</a></li>
             </ul>
             <div class="menu-icon">
                 <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
@@ -37,43 +39,36 @@
         </div>
     </nav>
 
-    <main class="w-[90%] mx-auto">
-        <div class="top relative">
-            <div class="search_div">
-                <i class="fa-solid fa-magnifying-glass text-white"></i>
-                <input type="#text">
+    <main>
+        <div>
+            <h1>About Developer</h1>
+            <p data-aos="zoom-in" >Hello there! I'm <span>Nematullo Nurmuhammadov</span>, the passionate developer behind this website. With a keen eye for detail
+                and a love for crafting seamless digital experiences, I set out to create a unique and user-friendly
+                online shopping platform.</p>
+            <h1>Frameworks and Technologies Used</h1>
+            <p data-aos="zoom-in" >In the development of this website, I've harnessed the power of the following frameworks and technologies
+                to create a modern, single-page application (SPA):</p>
+            <div data-aos="zoom-in" class="i">
+                <i class="fa-brands fa-react"></i>
+                <i class="fa-brands fa-node-js"></i>
+                <i class="fa-brands fa-css3-alt"></i>
             </div>
-            <div class="savat">
-                <i class="fa-solid fa-basket-shopping"></i> <sup class="text-white bg-red-500 py-1 px-2 rounded" id="badge">0</sup>
+            <h1>A Glimpse into the Backend:</h1>
+            <p data-aos="zoom-in">While my expertise primarily lies in frontend development, I've integrated Node.js and Express.js on the backend to ensure a robust and efficient server-side infrastructure. This combination allows for smooth communication between the frontend and the server, ensuring a seamless user experience.</p>
+            <div data-aos="zoom-in" class="i">
+                <i class="fa-solid fa-hexagon-nodes"></i>
+                <i class="fa-brands fa-node"></i>
             </div>
-            <div id="store" class="w-[800px] min-h-[300px] border bg-red-500 absolute translate-x-[-700]' duration-1000">
-
-            </div>
-        </div>
-
-
-        <!-- <div>
-            <h1 id="load" class="text-center"><i class="fa-solid fa-spinner fa-spin text-white fa-8x"></i></h1>
-        </div> -->
-
-        <div class="flex w-[95%] aa">
-            <div id="list" class="grid  grid-cols-3 mt-[50px] gap-10 bb">
-
-            </div>
-            <div class="text-white mt-[50px] ml-6 btns" id="categories">
-                <h3 class="pl-4 mb-[5px] font-black"> <i class="fa-solid fa-qrcode text-blue-800"></i> Categories :</h3>
-                <!-- <button>All</button>
-                <button>Clothes</button>
-                <button>Furniture</button>
-                <button>Electronics</button>
-                <button>Shoes</button>
-                <button>Miscellaneous</button> -->
+            <h1 >Let's Connect</h1>
+            <p data-aos="zoom-in" >  Explore the website, discover the offerings, and if you have any questions or suggestions, I'm here to listen. Your journey through this online shopping experience is as important to me as it is to you. Happy exploring!</p>
+            <div data-aos="zoom-in" class="i">
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-github"></i>
             </div>
         </div>
-        <br><br><br>
     </main>
 
-    <footer class="w-[85%] mx-auto">
+    <footer data-aos="zoom-in" class="w-[85%] mx-auto mt-[30px]">
         <hr class="mx-auto mb-6" width="100%">
         <div class="flex justify-between text-white">
             <div>
@@ -135,9 +130,14 @@
         }
 
     </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
     <script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
 
-    <script src="../js/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
