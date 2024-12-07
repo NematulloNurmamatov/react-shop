@@ -49,7 +49,7 @@ function render(product) {
         let div = document.createElement("div");
         div.classList.add("div");
         let p2 = document.createElement("p");
-        p2.textContent = product.category.name;
+        p2.textContent = product.category;
         p2.classList.add("p2");
         let p3 = document.createElement("p");
         p3.textContent = "Price"

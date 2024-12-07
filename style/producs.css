@@ -26,8 +26,13 @@
   display: inline;
   color: white;
   border: 1px solid rgb(85, 85, 85);
+  background-color: rgba(85, 85, 85, 0.205);
   padding: 6px 15px;
+  cursor: pointer;
   border-radius: 15px;
+}
+.aa .bb .div .p2:hover {
+  color: rgb(112, 59, 247);
 }
 .aa .bb .div .p3 {
   color: gray;
