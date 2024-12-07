@@ -157,6 +157,15 @@ function renderStore(store_list) {
     store_box.innerHTML = "";
     let fragment = document.createDocumentFragment();
 
+    let chiqish = document.createElement("button");
+    chiqish.textContent = "X";
+    chiqish.classList.add("text-red-600", "w-[48px]","text-end", "border", "border-red-600", "px-4", "py-2", "rounded-md","absolute","top-[100px]","right-2", "hover:text-white", "hover:bg-red-700", "focus:outline-none");
+    chiqish.setAttribute("onclick", "showStore()");
+    
+
+    fragment.appendChild(chiqish)
+
+
     store_list.forEach((product) => {
         let card = document.createElement("div");
         card.classList.add("text-white", "flex", "justify-between", "items-center");
@@ -217,6 +226,8 @@ function renderStore(store_list) {
 
         fragment.appendChild(card)
     });
+
+
     let total = document.createElement("h1");
     total.classList.add("text-2xl", "font-bold", "text-black", "bg-white", "px-2", "py-1", "rounded-md", "fixed", "bottom-4", "w-[45%]");
 
@@ -230,7 +241,7 @@ function renderStore(store_list) {
     fragment.appendChild(shopping);
     store_box.appendChild(fragment)
     total.textContent = `Total: $${store_list.reduce((total, product) => total + product.price * product.count, 0).toFixed(2)}`;
-
+    
 
 
 }
