@@ -151,6 +151,29 @@ footer .flex input {
   margin-right: 5px;
 }
 
+@media (max-width: 1122px) {
+  footer .flex {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  footer .flex h3 {
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  footer .flex .text {
+    width: 100%;
+    margin: auto;
+  }
+  footer .end {
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  nav .right {
+    display: none !important;
+  }
+}
 @media (max-width: 780px) {
   nav ul {
     position: absolute;
@@ -158,11 +181,9 @@ footer .flex input {
     left: 0;
     right: 0;
     flex-direction: column;
-    text-align: center;
-    background: #AE7B3C;
-    color: white !important;
     gap: 0;
     overflow: hidden;
+    gap: 10px !important;
   }
   nav ul li {
     padding: 20px;
@@ -180,7 +201,7 @@ footer .flex input {
     display: block;
   }
   nav .menu-icon i {
-    color: #000;
+    color: #fff;
   }
   nav #menuList {
     transition: all 0.5s;
@@ -188,12 +209,10 @@ footer .flex input {
   nav .button {
     display: none;
   }
-  nav .right {
-    display: none !important;
-  }
   nav .ch {
     margin-top: 20px;
     border: none !important;
     padding: 0 !important;
+    border-radius: 0px !important;
   }
 }/*# sourceMappingURL=navFooter.css.map */
