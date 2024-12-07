@@ -74,4 +74,38 @@
 }
 .aa .btns button:focus {
   border-left: 3px solid #1138b6;
+}
+
+#shoping {
+  display: none;
+  width: 80%;
+  margin: auto;
+  height: 80vh;
+  background-color: rgb(28, 92, 44);
+  text-align: center;
+}
+#shoping h1 {
+  font-size: 72px;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}
+#shoping p {
+  color: rgba(255, 255, 255, 0.604);
+  text-align: center;
+  margin-top: 20px;
+  font-size: 29px;
+}
+#shoping button {
+  border: none;
+  width: 300px;
+  background-color: #2416a3;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  margin-top: 20px;
 }/*# sourceMappingURL=producs.css.map */

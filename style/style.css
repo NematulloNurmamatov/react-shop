@@ -234,4 +234,54 @@ main .section5 .sec5 .ikki {
 main .section5 .sec5 .ikki img {
   width: 300px;
   border-radius: 10px;
+}
+
+@media (max-width: 1070px) {
+  main .section5 .ikki {
+    display: none;
+  }
+  main .section5 .bir input {
+    width: 60% !important;
+  }
+  footer .flex {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 780px) {
+  main section h1 {
+    font-size: 44px;
+  }
+  main section p {
+    font-size: 18px;
+  }
+  main .section2 .p2 {
+    width: 90%;
+    margin: auto;
+  }
+  main .section2 .power {
+    flex-direction: column;
+  }
+  main .section2 .power .left {
+    width: 90%;
+    margin: auto;
+  }
+  main .section2 .power .right {
+    width: 90%;
+    margin: auto;
+  }
+  main .section3 h4 {
+    font-size: 22px;
+  }
+  main .section3 .pi {
+    font-size: 14px;
+  }
+  main .section3 .cards {
+    grid-template-columns: 2fr 2fr;
+  }
+}
+@media (max-width: 520px) {
+  main .section3 .cards {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */

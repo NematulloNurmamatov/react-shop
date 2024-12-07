@@ -298,3 +298,83 @@ main {
         }
     }
 }
+
+@media (max-width:1070px) {
+    main {
+        .section5 {
+            .ikki {
+                display: none;
+            }
+
+            .bir {
+                input {
+                    width: 60% !important;
+                }
+            }
+        }
+    }
+
+    footer {
+        .flex {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width:780px) {
+    main {
+        section {
+            h1 {
+                font-size: 44px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .section2 {
+            .p2 {
+                width: 90%;
+                margin: auto;
+            }
+            .power {
+                flex-direction: column;
+                .left {
+                    width: 90%;
+                    margin: auto;
+                }
+                .right {
+                    width: 90%;
+                    margin: auto;
+                }
+            }
+
+        }
+
+        .section3 {
+            h4 {
+                font-size: 22px;
+            }
+
+            .pi {
+                font-size: 14px;
+            }
+
+            .cards {
+                grid-template-columns: 2fr 2fr;
+            }
+        }
+    }
+}
+
+@media (max-width:520px) {
+    main {
+        .section3 {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

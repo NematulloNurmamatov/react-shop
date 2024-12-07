@@ -1,10 +1,10 @@
 let load = document.querySelector("#load");
 let badge = document.querySelector("#badge");
-// let store_list = JSON.parse(localStorage.getItem("data")) || [];
 let store_list = [];
 let list = document.getElementById("list");
 let categories_list = document.getElementById("categories");
 let store_box = document.getElementById("store");
+let shoping = document.getElementById("shoping");
 
 async function getAllProducts() {
     let res = await fetch(
@@ -73,7 +73,7 @@ async function addToStore(params) {
     let res = await fetch(`https://fakestoreapi.com/products/${params}`);
     res = await res.json();
 
-    store_list.push({...res, count: 1 });
+    store_list.push({ ...res, count: 1 });
     badge.textContent = store_list.length;
     renderStore(store_list);
 }
@@ -140,6 +140,7 @@ const showStore = () => {
 function renderStore(store_list) {
     store_box.innerHTML = "";
     let fragment = document.createDocumentFragment();
+
     store_list.forEach((product) => {
         let card = document.createElement("div");
         card.classList.add("text-white", "flex", "justify-between", "items-center");
@@ -153,7 +154,7 @@ function renderStore(store_list) {
         img.classList.add("w-20", "h-20", "rounded-lg")
 
         let text_box = document.createElement("div");
-        
+
         let title = document.createElement("p");
         title.textContent = product.title;
 
@@ -172,7 +173,7 @@ function renderStore(store_list) {
         let remove_btn = document.createElement("button");
         remove_btn.setAttribute("onclick", `removeFromStore(${product.id})`)
         remove_btn.textContent = "Remove";
-        remove_btn.classList.add("text-red-600", "border", "border-red-600", "px-4", "py-2", "rounded-md","hover:text-white", "hover:bg-red-700", "focus:outline-none");
+        remove_btn.classList.add("text-red-600", "border", "border-red-600", "px-4", "py-2", "rounded-md", "hover:text-white", "hover:bg-red-700", "focus:outline-none");
 
         let minus = document.createElement("button");
         minus.setAttribute("onclick", `decrement(${product.id})`)
@@ -197,9 +198,25 @@ function renderStore(store_list) {
 
 
 
+
         fragment.appendChild(card)
     });
+    let total = document.createElement("h1");
+    total.classList.add("text-2xl", "font-bold", "text-black", "bg-white", "px-2", "py-1", "rounded-md", "fixed", "bottom-4", "w-[45%]");
+
+    let shopping = document.createElement("button");
+    shopping.textContent = "Shopping Now";
+    shopping.setAttribute("onclick", `shop()`)
+    shopping.classList.add("text-white", "bg-blue-500", "border", "border-blue-500", "px-4", "py-[7px]", "rounded-md", "hover:text-white", "hover:bg-blue-700", "focus:outline-none", "fixed", "bottom-4", "right-4", "w-[15%]");
+    
+    
+    fragment.appendChild(total);
+    fragment.appendChild(shopping);
     store_box.appendChild(fragment)
+    total.textContent = `Total: $${store_list.reduce((total, product) => total + product.price * product.count, 0).toFixed(2)}`;
+
+
+
 }
 
 
@@ -207,8 +224,8 @@ function increment(id) {
     let find_product = store_list.find((product) => {
         return product.id == id
     });
-    if(find_product.rating.count > find_product.count) {
-        find_product.count ++ ;
+    if (find_product.rating.count > find_product.count) {
+        find_product.count++;
         renderStore(store_list);
     }
     console.log(find_product);
@@ -218,8 +235,8 @@ function decrement(id) {
     let find_product = store_list.find((product) => {
         return product.id == id
     });
-    if(find_product.count > 1) {
-        find_product.count -- ;
+    if (find_product.count > 1) {
+        find_product.count--;
         renderStore(store_list);
     }
     console.log(find_product);
@@ -230,9 +247,9 @@ function removeFromStore(id) {
     let find_product = store_list.find((product) => {
         return product.id == id
     });
-    if(find_product) {
+    if (find_product) {
         store_list = store_list.filter((product) => {
-            return product.id!= id
+            return product.id != id
         });
         badge.textContent = store_list.length;
         renderStore(store_list);
@@ -241,9 +258,17 @@ function removeFromStore(id) {
 }
 
 
+function shop() {
+    shoping.style.display = 'block';
+    store.classList.toggle('translate-x-[1000px]')
+}
 
-
-
+function x() {
+    // removeFromStore()
+    badge.textContent = '0';
+    store_box.innerHTML = null;
+    shoping.style.display = 'none';
+}
 
 
 
