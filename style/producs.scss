@@ -187,6 +187,14 @@
     #list {
         grid-template-columns: 2fr 2fr;
     }
+    #shoping {
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 24px;
+        }
+    }
 }
 
 @media (max-width:730px) {
@@ -202,11 +210,23 @@
         }
     }
 }
+@media (max-width:700px) {
 
+    #shoping {
+        h1 {
+            font-size: 40px;
+        }
+    }
+}
 
 @media (max-width:620px) {
     #list {
         grid-template-columns: 330px;
         justify-content: center;
+    }
+    #shoping {
+        h1 {
+            font-size: 30px;
+        }
     }
 }
