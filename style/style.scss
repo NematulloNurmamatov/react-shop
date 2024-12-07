@@ -254,7 +254,7 @@ main {
             border-radius: 7px;
 
             .bir {
-                width: 70%;
+                width: 90%;
                 margin: auto;
 
                 .lorem {
@@ -273,6 +273,7 @@ main {
                     color: white;
                     width: 300px;
                     border-radius: 7px;
+                    margin-bottom: 20px;
                 }
 
                 button {
@@ -302,24 +303,23 @@ main {
 @media (max-width:1070px) {
     main {
         .section5 {
-            .ikki {
-                display: none;
+            .sec5 {
+                flex-direction: column !important;
+                img {
+                    width: 200px;
+                    // height: 220px;
+                }
             }
 
             .bir {
                 input {
-                    width: 60% !important;
+                    width: 90% !important;
                 }
             }
         }
     }
 
-    footer {
-        .flex {
-            flex-direction: column;
-            text-align: center;
-        }
-    }
+
 }
 
 @media (max-width:780px) {
@@ -364,6 +364,17 @@ main {
 
             .cards {
                 grid-template-columns: 2fr 2fr;
+            }
+        }
+    }
+}
+
+@media (max-width:700px) {
+    main {
+        .section5  {
+            .sec5 {
+                width: 95%;
+                margin: auto;
             }
         }
     }

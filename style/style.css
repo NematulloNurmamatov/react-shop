@@ -200,7 +200,7 @@ main .section5 .sec5 {
   border-radius: 7px;
 }
 main .section5 .sec5 .bir {
-  width: 70%;
+  width: 90%;
   margin: auto;
 }
 main .section5 .sec5 .bir .lorem {
@@ -218,6 +218,7 @@ main .section5 .sec5 .bir input {
   color: white;
   width: 300px;
   border-radius: 7px;
+  margin-bottom: 20px;
 }
 main .section5 .sec5 .bir button {
   padding: 11px 30px;
@@ -237,15 +238,14 @@ main .section5 .sec5 .ikki img {
 }
 
 @media (max-width: 1070px) {
-  main .section5 .ikki {
-    display: none;
+  main .section5 .sec5 {
+    flex-direction: column !important;
+  }
+  main .section5 .sec5 img {
+    width: 200px;
   }
   main .section5 .bir input {
-    width: 60% !important;
-  }
-  footer .flex {
-    flex-direction: column;
-    text-align: center;
+    width: 90% !important;
   }
 }
 @media (max-width: 780px) {
@@ -278,6 +278,12 @@ main .section5 .sec5 .ikki img {
   }
   main .section3 .cards {
     grid-template-columns: 2fr 2fr;
+  }
+}
+@media (max-width: 700px) {
+  main .section5 .sec5 {
+    width: 95%;
+    margin: auto;
   }
 }
 @media (max-width: 520px) {
