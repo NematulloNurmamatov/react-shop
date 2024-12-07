@@ -7,14 +7,21 @@ let store_box = document.getElementById("store");
 let shoping = document.getElementById("shoping");
 
 async function getAllProducts() {
-    let res = await fetch(
-        `https://fakestoreapi.com/products`,
-        {
-            method: "GET",
-        }
-    );
-    res = await res.json();
-    render(res)
+    try {
+        let res = await fetch(
+            `https://fakestoreapi.com/products`,
+            {
+                method: "GET",
+            }
+        );
+        res = await res.json();
+        render(res);
+    } catch (error) {
+        console.error("Xatolik yuz berdi:", error);
+    } finally {
+        // console.log("Fetch funksiyasi yakunlandi.");
+        load.style.display = "none";
+    }
 }
 
 getAllProducts()
@@ -23,10 +30,19 @@ function render(product) {
     product.forEach((product) => {
         let p = document.createElement("p");
         p.textContent = product.title;
+
+        function truncateText(text, maxLength) {
+            if (text.length > maxLength) {
+                return text.substring(0, maxLength) + "...";
+            }
+            return text;
+        }
+        p.textContent = truncateText(product.title, 19);
+
         p.classList.add("p");
         let img = document.createElement("img");
         img.src = product.image;
-        img.style.width = "500px";
+        img.style.width = "1000px";
         img.style.height = "200px";
 
         img.alt = product.title
@@ -208,8 +224,8 @@ function renderStore(store_list) {
     shopping.textContent = "Shopping Now";
     shopping.setAttribute("onclick", `shop()`)
     shopping.classList.add("text-white", "bg-blue-500", "border", "border-blue-500", "px-4", "py-[7px]", "rounded-md", "hover:text-white", "hover:bg-blue-700", "focus:outline-none", "fixed", "bottom-4", "right-4", "w-[15%]");
-    
-    
+
+
     fragment.appendChild(total);
     fragment.appendChild(shopping);
     store_box.appendChild(fragment)
@@ -262,13 +278,4 @@ function shop() {
     shoping.style.display = 'block';
     store.classList.toggle('translate-x-[1000px]')
 }
-
-function x() {
-    // removeFromStore()
-    badge.textContent = '0';
-    store_box.innerHTML = null;
-    shoping.style.display = 'none';
-}
-
-
 
