@@ -272,3 +272,40 @@ function shop() {
     shoping.style.display = 'block';
     store.classList.toggle('translate-x-[1000px]')
 }
+
+
+
+let searchInput = document.querySelector("#searchInput"); // HTML input element
+let products = []; // Global o‘zgaruvchi, API dan keladigan mahsulotlar uchun
+
+async function getAllProducts() {
+    try {
+        let res = await fetch(`https://fakestoreapi.com/products`, {
+            method: "GET",
+        });
+        res = await res.json();
+        products = res; // Mahsulotlarni global o‘zgaruvchiga yuklaymiz
+        render(products); // Render funksiyasiga uzatamiz
+    } catch (error) {
+        console.error("Xatolik yuz berdi:", error);
+    } finally {
+        load.style.display = "none";
+    }
+}
+
+getAllProducts();
+
+// Qidiruv funksiyasi
+function searchProducts(inputValue) {
+    const searchTerm = inputValue.toLowerCase();
+    const filteredProducts = products.filter(product =>
+        product.title.toLowerCase().includes(searchTerm)
+    );
+    render(filteredProducts);
+}
+
+searchInput.addEventListener("input", (event) => {
+    list.innerHTML = ""
+    const searchValue = event.target.value;
+    searchProducts(searchValue);
+});
