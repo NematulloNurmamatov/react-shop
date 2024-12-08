@@ -89,15 +89,10 @@ main .section2 .power .left .cards .card1 {
 }
 main .section2 .power .left .cards .card1 i {
   padding: 10px;
-  border-radius: 50%;
 }
 main .section2 .power .left .cards .card1:active {
   background-color: rgb(38, 38, 38);
   border: 3px solid rgb(112, 59, 247);
-}
-main .section2 .power .left .cards .card1:active i {
-  background-color: rgb(112, 59, 247);
-  color: white;
 }
 main .section2 .power .left p {
   color: rgba(255, 255, 255, 0.604);
@@ -135,12 +130,25 @@ main .section3 .cards {
 main .section3 .cards .card1 {
   background-color: rgb(33, 33, 33);
   padding: 20px;
+  border: 1px solid rgb(46, 46, 46);
+  transition: 0.3s;
 }
 main .section3 .cards .card1 i {
   background-color: rgb(112, 59, 247);
   padding: 10px;
   border-radius: 50%;
   font-size: 20px;
+  margin-bottom: 10px;
+}
+main .section3 .cards .card1 h3 {
+  font-size: 22px;
+  font-weight: 800;
+}
+main .section3 .cards .card1 p {
+  color: rgba(255, 255, 255, 0.604);
+}
+main .section3 .cards .card1:hover {
+  background-color: transparent;
 }
 main .section4 {
   width: 80%;
@@ -222,11 +230,15 @@ main .section5 .sec5 .bir input {
 }
 main .section5 .sec5 .bir button {
   padding: 11px 30px;
-  background-color: rgb(112, 59, 247);
+  background-color: rgba(112, 59, 247, 0.8);
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: 0.3s;
+}
+main .section5 .sec5 .bir button:hover {
+  background-color: rgb(112, 59, 247);
 }
 main .section5 .sec5 .ikki {
   width: 50%;

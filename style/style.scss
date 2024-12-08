@@ -99,7 +99,6 @@ main {
                         display: flex;
                         align-items: center;
                         margin-bottom: 20px;
-                        // color: rgb(112, 59, 247);
                         border: 3px solid rgb(83, 83, 83);
                         background-color: rgb(47, 47, 47);
                         padding: 20px;
@@ -108,19 +107,12 @@ main {
 
                         i {
                             padding: 10px;
-                            border-radius: 50%;
                         }
                     }
 
                     .card1:active {
                         background-color: rgb(38, 38, 38);
                         border: 3px solid rgb(112, 59, 247);
-
-                        i {
-
-                            background-color: rgb(112, 59, 247);
-                            color: white;
-                        }
                     }
                 }
 
@@ -167,17 +159,29 @@ main {
             margin: auto;
             margin-top: 70px;
 
-            // margin-bottom: 200px;
             .card1 {
                 background-color: rgb(33, 33, 33);
                 padding: 20px;
-
+                border: 1px solid rgb(46, 46, 46);
+                transition: .3s;
+                
                 i {
                     background-color: rgb(112, 59, 247);
                     padding: 10px;
                     border-radius: 50%;
                     font-size: 20px;
+                    margin-bottom: 10px;
                 }
+                h3 {
+                    font-size: 22px;
+                    font-weight: 800;
+                }
+                p {
+                    color: rgba(255, 255, 255, 0.604);
+                }
+            }
+            .card1:hover {
+                background-color: transparent;
             }
         }
 
@@ -278,11 +282,15 @@ main {
 
                 button {
                     padding: 11px 30px;
-                    background-color: rgb(112, 59, 247);
+                    background-color: rgba(112, 59, 247, 0.8);
                     color: white;
                     border: none;
                     border-radius: 8px;
                     cursor: pointer;
+                    transition: .3s;
+                }
+                button:hover {
+                    background-color: rgb(112, 59, 247);
                 }
             }
 
