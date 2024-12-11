@@ -54,11 +54,19 @@ main .fa-css3-alt {
 main .fa-css3-alt:hover {
   color: rgba(81, 144, 247, 0.5);
 }
-main .fa-hexagon-nodes, main .fa-node {
+main .fa-hexagon-nodes,
+main .fa-node {
   transition: 0.3s;
 }
-main .fa-hexagon-nodes:hover, main .fa-node:hover {
+main .fa-hexagon-nodes:hover,
+main .fa-node:hover {
   color: green;
+}
+main .fa-airbnb {
+  transition: 0.3s;
+}
+main .fa-airbnb:hover {
+  color: red;
 }
 main .fa-linkedin {
   transition: 0.3s;
